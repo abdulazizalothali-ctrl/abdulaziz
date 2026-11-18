@@ -1,0 +1,13 @@
+{
+  "name": "whatsapp-agent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Send WhatsApp messages through Kapso",
+  "scripts": {
+    "send": "node send.mjs"
+  },
+  "dependencies": {
+    "@kapso/whatsapp-cloud-api": "latest"
+  }
+}
