@@ -12,3 +12,11 @@
 
 Free-form text only works inside WhatsApp's 24-hour customer window; to start a
 conversation, use an approved template.
+
+## Scheduled messages
+Edit `schedules.json` (one-time via `at`, or every day via `daily` + `timezone`), then:
+```bash
+node scheduler.mjs --dry-run --once   # preview what would fire now
+node scheduler.mjs                    # run continuously (keep it alive with pm2/systemd)
+```
+Sent jobs are tracked in `state.json` so nothing is sent twice. Outside the 24h window use `"template": "name", "lang": "ar"` instead of `"text"`.
